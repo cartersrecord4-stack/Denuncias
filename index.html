@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Prueba de obtención de IP — Proyecto escolar</h1>
+  <p>Tu IP pública es:</p>
+  <pre id="ip">Cargando...</pre>
+
+  <script>
+    fetch("https://api.ipify.org?format=json")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("ip").textContent = data.ip;
+      })
+      .catch(err => {
+        document.getElementById("ip").textContent = "Error al obtener la IP.";
+      });
+  </script>
+</body>
+</html>
