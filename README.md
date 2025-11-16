@@ -1,2 +1,0 @@
-# Denuncias
-Denuncias
